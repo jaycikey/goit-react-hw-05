@@ -7,7 +7,6 @@ export default function MovieDetails({ movieData, IMAGE_BASE_URL }) {
   const location = useLocation();
   const backLinkRef = useRef(location.state);
 
-  if (!movieData) return <div>Loading...</div>;
   return (
     <div>
       <Backlink href={backLinkRef.current ?? '/'}>Go back</Backlink>
