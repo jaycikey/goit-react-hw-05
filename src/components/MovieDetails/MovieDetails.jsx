@@ -14,7 +14,11 @@ export default function MovieDetails({ movieData, IMAGE_BASE_URL }) {
       <div className={styles.detailsContainer}>
         <img
           className={styles.movieImage}
-          src={`${IMAGE_BASE_URL}${movieData.poster_path}`}
+          src={
+            movieData.poster_path
+              ? `${IMAGE_BASE_URL}${movieData.poster_path}`
+              : 'https://via.placeholder.com/300x450'
+          }
           alt={movieData.title}
         />
         <div className={styles.movieContent}>
